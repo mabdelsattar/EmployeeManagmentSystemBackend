@@ -1,4 +1,4 @@
-namespace EmployeeManagement.API.Models
+namespace EmployeeManagement.Entities
 {
     public enum Department
     {

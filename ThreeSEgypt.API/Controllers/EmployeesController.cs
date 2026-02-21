@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
 using EmployeeManagement.Core.Dtos;
 using EmployeeManagement.Core.Interfaces;
-using EmployeeManagement.Entities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.API.Controllers
 {
@@ -16,6 +15,7 @@ namespace EmployeeManagement.API.Controllers
             _employeeService = employeeService;
         }
 
+       
         [HttpGet]
         public async Task<ActionResult<PagedResult<EmployeeDto>>> Get([FromQuery] string? search, [FromQuery] int page = 1, [FromQuery] int pageSize = 10)
         {
@@ -43,7 +43,7 @@ namespace EmployeeManagement.API.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var entity = await _employeeService.GetByIdAsync(id);
-            if (entity == null) 
+            if (entity == null)
                 return NotFound();
             await _employeeService.DeleteAsync(id);
             return NoContent();

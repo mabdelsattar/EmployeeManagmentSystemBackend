@@ -28,6 +28,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<EmployeeManagementDbContext>(opt => opt.UseSqlServer(connectionString));
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+builder.Services.AddScoped<ILookupService, LookupService>();
 
 var app = builder.Build();
 

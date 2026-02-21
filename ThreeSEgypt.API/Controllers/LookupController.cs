@@ -1,5 +1,8 @@
-using Microsoft.AspNetCore.Mvc;
 using EmployeeManagement.API.Models;
+using EmployeeManagement.Core.Dtos;
+using EmployeeManagement.Core.Interfaces;
+using EmployeeManagement.Core.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EmployeeManagement.API.Controllers
 {
@@ -7,11 +10,17 @@ namespace EmployeeManagement.API.Controllers
     [Route("api/[controller]")]
     public class LookupController : ControllerBase
     {
-        [HttpGet("departments")]
-        public ActionResult<IEnumerable<object>> GetDepartments()
+        private readonly ILookupService _lookupService;
+        public LookupController(ILookupService lookupService)
         {
-            var values = Enum.GetValues(typeof(Department)).Cast<Department>().Select(d => new { Id = (int)d, Name = d.ToString() });
-            return Ok(values);
+            _lookupService = lookupService;
+        }
+
+        [HttpGet("departments")]
+        public async Task<ActionResult<IEnumerable<DepartmentDto>>> GetDepartments()
+        {
+            var items = await _lookupService.GetDepartmentsAsync();
+            return Ok(items);
         }
     }
 }
