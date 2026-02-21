@@ -6,7 +6,7 @@ using EmployeeManagement.Dal.Interfaces;
 using EmployeeManagement.Dal.Repositories;
 using EmployeeManagement.Data;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);

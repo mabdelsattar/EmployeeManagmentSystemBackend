@@ -10,7 +10,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeSEgypt.Dal", "ThreeSEg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeSEgypt.Entities", "ThreeSEgypt.Entities\ThreeSEgypt.Entities.csproj", "{C31D4E5F-7A8B-4934-AB9C-E2F3A4B5C6D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeSEgypt.Data", "ThreeSEgypt.Data\ThreeSEgypt.Data.csproj", "{7A6872BD-B1EE-4199-A58B-B9B6A5BD010D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreeSEgypt.Infrastructure", "ThreeSEgypt.Data\ThreeSEgypt.Infrastructure.csproj", "{7A6872BD-B1EE-4199-A58B-B9B6A5BD010D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,5 +41,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1322944-EEC1-4770-81D0-BAE62DD3DDC3}
 	EndGlobalSection
 EndGlobal

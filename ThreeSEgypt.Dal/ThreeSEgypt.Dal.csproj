@@ -1,11 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\ThreeSEgypt.Entities\ThreeSEgypt.Entities.csproj" />
-    <ProjectReference Include="..\ThreeSEgypt.Data\ThreeSEgypt.Data.csproj" />
+    <ProjectReference Include="..\ThreeSEgypt.Data\ThreeSEgypt.Infrastructure.csproj" />
   </ItemGroup>
 </Project>
